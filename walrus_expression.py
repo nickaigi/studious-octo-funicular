@@ -23,3 +23,12 @@ class Walrus(object):
         while current != "quit":
             inputs.append(current)
             current = input("Write something: ")
+
+    def old_example_two_dry:
+        """ DRY - Don't Repeat Yourself """
+        inputs = list()
+        while True:
+            current = input("Write somethings: ")
+            if current == "quit":
+                break
+            inputs.append(current)
