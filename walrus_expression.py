@@ -24,11 +24,19 @@ class Walrus(object):
             inputs.append(current)
             current = input("Write something: ")
 
-    def old_example_two_dry:
+    def old_example_two_dry(self):
         """ DRY - Don't Repeat Yourself """
         inputs = list()
         while True:
             current = input("Write somethings: ")
             if current == "quit":
                 break
+            inputs.append(current)
+
+    def example_two(self):
+        """
+        avoids repetition, is logical
+        """
+        inputs = list()
+        while (current := input("Write something: ")) != "quit":
             inputs.append(current)
