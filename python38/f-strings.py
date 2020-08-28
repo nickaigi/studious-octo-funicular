@@ -5,8 +5,19 @@
   with their values at runtime
 """
 
-def to_lower(text):
-    return text.lower()
+import math
+
+class Comedian(object):
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} is {self.age}.'
+
+    def __repr__(self):
+        return f'{self.first_name} {self.last_name} is {self.age}. Suprise!'
 
 
 def main():
@@ -19,6 +30,10 @@ def main():
     print(f'{2 * 16}')
 
     # you can call functions in an f-string
+    print(f'{name.lower()} is funny.')
+    # you could use objects created from classes with f-strings
+    new_comedian = Comedian('Nick', 'Son', 32)
+    print(f'{new_comedian}')
 
 
 if __name__ == '__main__':
