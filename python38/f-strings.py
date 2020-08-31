@@ -47,6 +47,18 @@ def self_documenting_expressions():
     print(f'{user=!s} {delta.days=:,d}')
 
 
+def multiline_fstrings():
+    name = 'Nickson'
+    profession = 'Developer'
+    country = 'Kenya'
+    message = (
+        f'Hi {name}. '
+        f'You are a {profession}. '
+        f'You are from {country}. '
+    )
+    print(message)
+
+
 def main():
     name = 'Nickson'
     age = 32
@@ -67,6 +79,7 @@ def main():
     # !r
     print(f'{new_comedian!r}')
     self_documenting_expressions()
+    multiline_fstrings()
 
 
 if __name__ == '__main__':
