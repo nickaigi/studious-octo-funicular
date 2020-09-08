@@ -25,3 +25,5 @@ def draw_line_new(direction: Literal['horizontal', 'vertical']) -> None:
 
 if __name__ == '__main__':
     draw_line('up')
+    draw_line_new('up')
+    # results in error: Argument 1 to "draw_line_new" has incompatible type "Literal['up']"; expected "Union[Literal['horizontal'], Literal['vertical']]"
