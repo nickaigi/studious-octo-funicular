@@ -34,4 +34,10 @@ function login(email, password){
     // timingSafeEqual helps prevent from such attacks
     const keyBuffer = Buffer.from(key, 'hex');
     const match = timingSafeEqual(hashedBuffer, keyBuffer);
+
+    if (match){
+        return 'login success!'
+    } else {
+        return 'login fail!'
+    }
 }
